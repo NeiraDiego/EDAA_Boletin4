@@ -1,0 +1,44 @@
+% Paquetes recomendados en el preámbulo:
+% \usepackage{booktabs}
+% \usepackage{float}
+% \usepackage{multirow}
+
+% ===== Tabla de memoria =====
+\begin{table}[H]
+\centering
+\caption{Memoria promedio utilizada por cada estructura RMQ (en MB).}
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{rcccc}
+\toprule
+\textbf{Tamaño} & \textbf{ST-Static} & \textbf{ST-Dynamic} & \textbf{Seg-Static} & \textbf{Seg-Dynamic}\\
+\midrule
+1000 & 0.0045 & 0.0045 & 0.0153 & 0.0153\\
+2000 & 0.0111 & 0.0111 & 0.0305 & 0.0305\\
+3000 & 0.0189 & 0.0189 & 0.0458 & 0.0458\\
+4000 & 0.0268 & 0.0268 & 0.0610 & 0.0610\\
+5000 & 0.0359 & 0.0359 & 0.0763 & 0.0763\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ===== Tabla de tiempos =====
+\begin{table}[H]
+\centering
+\caption{Tiempo de construcción promedio y desviación estándar (ns) para cada estructura RMQ.}
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{rcccccccc}
+\toprule
+\multirow{2}{*}{\textbf{Tamaño}} & \multicolumn{2}{c}{\textbf{ST-Static}} & \multicolumn{2}{c}{\textbf{ST-Dynamic}} & \multicolumn{2}{c}{\textbf{Seg-Static}} & \multicolumn{2}{c}{\textbf{Seg-Dynamic}}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+ & \textbf{Prom.} & \textbf{Desv.} & \textbf{Prom.} & \textbf{Desv.} & \textbf{Prom.} & \textbf{Desv.} & \textbf{Prom.} & \textbf{Desv.}\\
+\midrule
+1000 & 130325.63 & 22320.66 & 129347.57 & 8838.99 & 21079.07 & 1429.30 & 21767.37 & 5913.99\\
+2000 & 270667.20 & 10064.15 & 273007.27 & 11128.63 & 45185.40 & 4392.69 & 43995.17 & 3746.57\\
+3000 & 425532.30 & 8586.50 & 436543.77 & 25705.15 & 68072.10 & 5118.91 & 67276.57 & 7924.66\\
+4000 & 589151.37 & 14949.64 & 593449.70 & 29486.95 & 80353.30 & 5023.18 & 79678.77 & 5750.25\\
+5000 & 763318.37 & 17319.68 & 775749.20 & 31856.01 & 111884.40 & 6653.98 & 112037.13 & 9932.25\\
+\bottomrule
+\end{tabular}
+\end{table}
